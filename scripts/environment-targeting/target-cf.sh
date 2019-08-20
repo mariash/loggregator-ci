@@ -47,7 +47,7 @@ function target-cf() (
     PASSWORD=$(cf-password-from-credhub)
   fi
 
-  cf auth "$USERNAME" "$PASSWORD" ${cf_flags}
+  cf auth "$USERNAME" "$PASSWORD"
 
   if [[ -n ${ORG} && -n ${SPACE} ]]; then
     create-org-space-and-target
